@@ -18,11 +18,106 @@ Este projeto é uma API para gerenciar informações sobre filmes. Ele permite q
 
 ## URL API: https://web-api-film.onrender.com
 
-## Observação: A conexão com o banco de dados pode apresentar lentidão devido ao uso de um banco de dados gratuito. Se a conexão não for estabelecida imediatamente, tente novamente algumas vezes. Após a conexão ser estabelecida, o desempenho da API deve ser rápido.
+## **Obs:** Observação: A conexão com o banco de dados pode apresentar lentidão devido ao uso de um banco de dados gratuito. Se a conexão não for estabelecida imediatamente, tente novamente algumas vezes. Após a conexão ser estabelecida, o desempenho da API deve ser rápido.
+
+## Para ter o acesso a API e necessário cria um usúario
+
+### [POST] auth/register
+
+# Exemplo:
+
+Body:
+```json
+{
+	"name": "pedro",
+	"email": "pedro@teste.com",
+	"password": "teste",
+	"confirmpassword": "teste"
+}
+```
+Resposta:
+```json
+{
+	"msg": "Usúario criado com sucesso!"
+}
+```
+## Depois de ter criado o usúario e necessario fazer o longin
+
+### [POST] /auth/login
+
+# Exemplo:
+Body:
+```json
+{
+	"email": "pedro@teste.com",
+	"password": "teste"
+}
+```
+Resposta:
+```json
+{
+	"msg": "Autenticação realizada com sucesso",
+	"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZDEzNDdiMjhjODA1NDllNjE2ZTU4YiIsImlhdCI6MTcwODIwOTQ4MH0.GxXlVyqCxgz_pANlxxkQWIrSKods1_zYx_dPbBtVsgM"
+}
+```
+## Depois de efetua o login você ira receber um token, esse token que liberar o acesso a API
+
+Token da resposta acima:
+```json
+{
+	
+	"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZDEzNDdiMjhjODA1NDllNjE2ZTU4YiIsImlhdCI6MTcwODIwOTQ4MH0.GxXlVyqCxgz_pANlxxkQWIrSKods1_zYx_dPbBtVsgM"
+}
+```
+## Usando Insomnia 
+
+### Passo 1
+
+![Image](./images/Captura%20de%20Tela%20(10).png)
+
+1. Clique na engrenagem indicada pela seta.
+
+### Passo 2
+
+![Image](./images/Captura%20de%20Tela%20(11).png)
+
+1. Crie uma variável com seu token, conforme mostrado na imagem.
+
+2. **Obs:** Não esqueça de adicionar "Bearer" junto com seu token, como mostrado na imagem, pois ele será responsável por identificar o tipo do token de acesso.
+
+### Passo 3
+
+![Imagem](./images/Captura%20de%20Tela%20(12).png)
+
+1. Clique em "Headers", conforme indicado na imagem.
+
+![Image](./images/Captura%20de%20Tela%20(13).png)
+
+2. Clique em "Add", conforme indicado na imagem.
+
+![Image](./images/Captura%20de%20Tela%20(15).png)
+
+### Passo 4
+
+![Image](./images/Captura%20de%20Tela%20(15).png)
+
+1. No campo "header", você irá definir o header como "```authorization```". 
+
+![Image](./images/Captura%20de%20Tela%20(16).png)
+
+2. No campo "value", pressione "Ctrl + Espaço" no seu teclado e adicione a variável que criamos no Passo 2.
+
+![Image](./images/Captura%20de%20Tela%20(14).png)
+
+# Seguindo os passos, você terá a configuração do token feita com sucesso. 
+
+# Com isso, você poderá testar a API. 
+
+## **Obs:** Essa configuração deve ser feita nos "Headers" de cada nova "New Request" que você criar com o Insomnia.
 
 ## Endpoints
 
-### [POST] /film
+### [POST] /user/add/film
 
 escrição: Cadastra um novo filme.
 
@@ -48,7 +143,7 @@ Resposta:
 }
 ```
 
-### [GET] /films
+### [GET] /user/list/films
 
 Descrição: Retorna todos os filmes cadastrados.
 
@@ -106,7 +201,7 @@ Resposta:
 ]
 ```
 
-### [GET] /films/{id}
+### [GET] /user/list/films/{id}
 
 Descrição: Retorna um único filme com o ID especificado.
 
@@ -123,7 +218,7 @@ Resposta:
 
 ```
 
-### [PUT] /film/{id}
+### [PUT] /user/update/film/:id
 
 Descrição: Atualiza dados de um filme com o ID especificado.
 
@@ -146,7 +241,7 @@ Resposta:
 }
 ```
 
-### [DELETE] /film/{id}
+### [DELETE] /user/delete/film/:id
 
 Descrição: Exclui um único filme com o ID especificado.
 
