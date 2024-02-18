@@ -317,7 +317,7 @@ Resposta:
 ## Fontes
 - [Documentação Express](https://expressjs.com/)
 - [Documentação Mongoose](https://mongoosejs.com/docs/guide.html)
-- [Documentação JWB](https://www.npmjs.com/package/jsonwebtoken)
+- [Documentação JWT](https://www.npmjs.com/package/jsonwebtoken)
 - [Documentação Insomnia](https://docs.insomnia.rest/insomnia/send-your-first-request)
 - [Documentação Render](https://docs.render.com/deploy-node-express-app)
 - [Vídeo Aula Criação de API ](https://youtu.be/zaWFnHagbrM?si=nldSk8jHilk3g1Nb)
