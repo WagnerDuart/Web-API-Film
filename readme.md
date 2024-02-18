@@ -58,6 +58,38 @@ Para testar a API, é necessário um framework para desenvolvimento/teste de API
 
 Para gerenciar as informações da API em um banco de dados, foi adotada a tecnologia MongoDB, utilizando sua versão na nuvem conhecida como MongoDB Atlas Database. Essa escolha permitiu armazenar e manipular os dados de forma eficiente, aproveitando os recursos oferecidos pela plataforma Atlas para garantir a disponibilidade e a segurança dos dados da API de filmes.
 
+- Estrutura do Banco de Dados 
+
+```json
+[
+	{
+		"_id": "65c960171b30255fc19d18e3",
+		"title": "Diário de uma Paixão",
+		"description": "Em um asilo, vivem um homem (James Garner) e uma mulher (Gena Rowlands). Ele vive lá por opção, ela, por consequência de uma demência senil que prejudicou sua memória. Todos os dias, o homem lê para a senhora um capítulo de uma linda história de amor, que foi escrita num velho diário. A história consiste no romance de Noah Calhoun (Ryan Gosling) e Allie Hamilton (Rachel McAdams), que se conheceram e apaixonaram-se num parque de diversões em Seabrook Island, na Carolina do Sul, nos anos 40. Foi o verão mais intenso de suas vidas. Porém, por imposição da família de Allie, o casal, loucamente apaixonado, teve de separar-se quando as férias acabaram. Eles não aceitavam que ela, uma jovem rica de 17 anos se envolvesse com um pobre operário.",
+		"image_url": "https://upload.wikimedia.org/wikipedia/pt/3/32/The_Notebook_p%C3%B4ster.jpg",
+		"genre": "Drama Romântico",
+		"__v": 0
+	},
+	{
+		"_id": "65c960751b30255fc19d18e5",
+		"title": "Cidade dos Anjos",
+		"description": "O filme conta a história do anjo Seth, encarregado de tomar conta de Los Angeles e que se apaixona pela mortal Maggie, uma cirurgiã que fica transtornada enquanto um paciente perde a vida na sua mesa de cirurgia. Seth acompanha o sofrimento de Maggie e desenvolve sentimentos por ela que transformam sua condição imortal, de repente ele pensa em desistir da eternidade para ficar com ela.",
+		"image_url": "https://upload.wikimedia.org/wikipedia/pt/6/6d/City_Angels_poster.jpg",
+		"genre": "Romance",
+		"__v": 0
+	},
+	{
+		"_id": "65c961861b30255fc19d18e7",
+		"title": "Avatar",
+		"description": "A história se concentra em um conflito épico em Pandora, uma lua habitada do tamanho da Terra de Polyphemus, um dos três gigantes gasosos orbitando Alpha Centauri. Em Pandora, colonos humanos e os habitantes indígenas humanoides sencientes de Pandora, os Na'vi, travam uma guerra sobre os recursos do planeta e a existência contínua deste último. O título do filme refere-se aos corpos humanos-na'vi controlados remotamente, geneticamente modificados, usados pelos personagens humanos do filme para interagir com os nativos.",
+		"image_url": "https://upload.wikimedia.org/wikipedia/pt/b/b0/Avatar-Teaser-Poster.jpg",
+		"genre": "Ação, Aventura, Ficção Científica",
+		"__v": 0
+	},
+	
+]
+```
+
 ## Registro de Usuário
 
 ### Para ter o acesso a API e necessário cria um usúario
