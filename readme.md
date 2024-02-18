@@ -31,7 +31,7 @@ Antes de utilizar as operações privadas da API, os usuários devem se autentic
 
 ## URL API: https://web-api-film.onrender.com
 
-## **Obs:** Observação: A conexão com o banco de dados pode apresentar lentidão devido ao uso de um banco de dados gratuito. Se a conexão não for estabelecida imediatamente, tente novamente algumas vezes. Após a conexão ser estabelecida, o desempenho da API deve ser rápido.
+### **Obs:** A conexão com o banco de dados pode apresentar lentidão devido ao uso de um banco de dados gratuito. Se a conexão não for estabelecida imediatamente, tente novamente algumas vezes. Após a conexão ser estabelecida, o desempenho da API deve ser rápido.
 
 ### Instalação Local
 Antes de iniciar o servidor, é necessário definir as variáveis de ambiente no arquivo .env. Certifique-se de criar um arquivo .env na raiz do projeto e definir as variáveis necessárias, como o segredo para geração de tokens JWT e as configurações do banco de dados MongoDB.
